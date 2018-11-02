@@ -1,8 +1,11 @@
-function SideBarMenu () {
+function SideBarMenu (color, direction) {
     this.isOpen = true
-    this.isOnTheLeft = true
-    this.isOnTheRight = false
-    this.bgColor = 'red'
+    this.isOnTheLeft = direction === 'left' ? true : false
+    this.isOnTheRight = direction === 'right' ? true : false
+    this.bgColor = color || 'red'
+    if (!this.isOnTheLeft && !this.isOnTheRight) {
+        this.isOnTheLeft = true
+    }
  
  }
  
