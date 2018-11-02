@@ -13,7 +13,15 @@ function SideBarMenu () {
 
      document.body.appendChild(menuDiv)
      menuDiv.style.backgroundColor = this.bgColor
-     menuDiv.style.height = '300px'
+     menuDiv.style.height = '100vh'
+     menuDiv.style.width = '200px'
+     menuDiv.style.position = 'fixed'
+     menuDiv.style.top = '0'
+    
+     if (this.isOnTheLeft) menuDiv.style.left = '0'
+     if (this.isOnTheRight) menuDiv.style.right = '0'
+     if (!this.isOpen) menuDiv.style.display = 'none'
+
  };
  
  
