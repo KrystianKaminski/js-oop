@@ -6,7 +6,8 @@ function SideBarMenu (color, direction) {
     if (!this.isOnTheLeft && !this.isOnTheRight) {
         this.isOnTheLeft = true
     }
- 
+    
+    this.init()
  }
  
  SideBarMenu.prototype.renderFunction = function() {
@@ -26,12 +27,11 @@ function SideBarMenu (color, direction) {
      if (!this.isOpen) menuDiv.style.display = 'none'
 
  };
+
+ SideBarMenu.prototype.init = function() {
+     this.renderFunction()
+ }
  
  
  const menu1 = new SideBarMenu()
-
- menu1.renderFunction()
-
  const menu2 = new SideBarMenu('green', 'right');
-
- menu2.renderFunction()
