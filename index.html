@@ -15,8 +15,7 @@
         menu1.toggleMenu()
 
         const button = new ClickableButton(
-            'Toggle',
-            () => menu2.toggleMenu())
+            'Toggle', menu2.toggleMenu.bind(menu2))
     </script>
 </body>
 </html>
