@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <script src="ClickableButton.js"></script>
+    <script src="SideBarMenu.js"></script>
+    <script>
+        const menu1 = new SideBarMenu()
+        const menu2 = new SideBarMenu('green', 'right')
+        menu1.toggleMenu()
+
+        const button = new ClickableButton(
+            'Toggle',
+            () => menu2.toggleMenu())
+    </script>
 </body>
 </html>

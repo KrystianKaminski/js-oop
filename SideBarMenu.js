@@ -35,15 +35,6 @@ function SideBarMenu (color, direction) {
  }
 
  SideBarMenu.prototype.toggleMenu = function() {
-    if (this.isOpen === true) {
-        this.isOpen = false
-    } else {
-        this.isOpen = true
-    }
+    this.isOpen = !this.isOpen
     this.renderFunction()
 }
- 
- 
- const menu1 = new SideBarMenu()
- const menu2 = new SideBarMenu('green', 'right')
- menu2.toggleMenu()
