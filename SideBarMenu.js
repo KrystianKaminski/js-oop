@@ -31,6 +31,10 @@ function SideBarMenu (color, direction) {
  };
 
  SideBarMenu.prototype.init = function() {
+     new ClickableButton(
+         'Toggle Menu',
+         this.toggleMenu.bind(this)
+     )
      this.renderFunction()
  }
 
