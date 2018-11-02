@@ -31,3 +31,7 @@ function SideBarMenu (color, direction) {
  const menu1 = new SideBarMenu()
 
  menu1.renderFunction()
+
+ const menu2 = new SideBarMenu('green', 'right');
+
+ menu2.renderFunction()
