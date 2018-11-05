@@ -1,13 +1,17 @@
-function ToDo() {
-  this.tasks = [];
 
-  this.render();
+class ToDo {
+    constructor() {
+        this.tasks = []
+        this.render()
+    }
 }
 
-function Task(text) {
-  this.text = text;
-
+class Task {
+    constructor(text) {
+        this.text = text
+    }
 }
+
 
 ToDo.prototype.addTask = function(text) {
   this.tasks.push(new Task(text));
