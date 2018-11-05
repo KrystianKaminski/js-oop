@@ -12,15 +12,24 @@ ToDo.prototype.addTask = function(text) {
 }
 
 ToDo.prototype.render = function() {
-    const div = document.createElement('div')
-    div.innerText = this.tasks
-    document.body.appendChild(div)
+    document.body.innerHTML = ''
+
+    this.tasks.forEach(task => {
+        const div = document.createElement('div')
+        div.innerText = task.text
+        document.body.appendChild(div)
+    })
 }
 
 const a = new ToDo()
 
-a.addTask('task')
-a.addTask('task')
-a.addTask('task')
+a.addTask('text')
+a.addTask('text')
+a.addTask('text')
+a.addTask('text')
+a.addTask('text')
+a.addTask('text')
+a.addTask('text')
+a.addTask('text')
 
 a.render()
