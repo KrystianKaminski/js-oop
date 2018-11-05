@@ -6,9 +6,9 @@ function Task(text) {
     this.text = text
 }
 
+
 ToDo.prototype.addTask = function(text) {
-    new Task(text)
-    this.tasks.push(text)
+    this.tasks.push(new Task(text))
 }
 
 ToDo.prototype.render = function() {
